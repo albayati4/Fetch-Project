@@ -28,7 +28,7 @@ fake-gold-bar-finder/
 Here’s a snippet from the `find_fake_gold_bar.cy.js` file that highlights how the script handles alerts from the website:
 
 ```javascript
-// Cypress handles uncaught exceptions and alert messages
+// Handling uncaught exceptions and alert messages
 Cypress.on("uncaught:exception", () => {
   return false; // Prevent Cypress from failing due to uncaught exceptions
 });
@@ -37,7 +37,7 @@ describe("Find the Fake Gold Bar", () => {
   it("should identify the fake bar and validate the result", () => {
     cy.visit("https://sdetchallenge.fetch.com");
 
-    // Example of interacting with the website
+    // Interacting with the website
     cy.get("#left_0").type("1");
     cy.get("#right_0").type("4");
     cy.get("#weigh").click();
